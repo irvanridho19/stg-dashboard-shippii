@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MyShippii - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/sb-admin-2.css">
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-block align-items-center justify-content-center" href="index.html">
+                <img src="img/logo-white.png" alt="Logo" height="50">
+            </a>
+
+            <a class="sidebar-brand d-block align-items-center justify-content-center mb-3" href="index.html">
+                <img src="img/phatsisa_logo.png" alt="Logo" height="50">
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-1">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link active" href="home.html">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Home</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                MAIN MENU
+            </div>
+
+            <!-- Nav Item - Main Menu Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="locker.html">
+                    <i class="fas fa-box-open"></i>
+                    <span>My Locker</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="phatsisa-tracker.html">
+                    <i class="fas fa-building"></i>
+                    <span>Phatsisa</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Addons
+            </div>
+
+            <!-- Nav Item - Addon Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="calculator.html">
+                    <i class="fas fa-calculator"></i>
+                    <span>Calculator</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="calendar.html">
+                    <i class="fas fa-calendar"></i>
+                    <span>Calendar</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                UTILITIES
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="address-book.html">
+                    <i class="fas fa-fw fa-address-book"></i>
+                    <span>Address Book</span></a>
+            </li>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">1</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Notifications Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">Your order #1122334 has been updated</span>
+                                    </div>
+                                </a>
+                                <!-- <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a> -->
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">1</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! We have a special deals for you!</div>
+                                        <div class="small text-gray-500">MyShippii Customer Service · 58m</div>
+                                    </div>
+                                </a>
+                                <!-- <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a> -->
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Sibusiso Khumalo</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item disabled" href="#">
+                                    <i class="fas fa-lock mr-2"></i>
+                                    Locker ID: #1234
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Welcoming Card -->
+                    <div class="alert alert-success" role="alert">
+                        Happy Shippiing!
+                    </div>
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
+                        <h1 class="h3 mb-0 text-gray-800">Start Using MyShippii</h1>
+                    </div>
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
+                        <p class="text-body">
+                            Now that you have a Locker address & MyShippii address, you can use that address to shop on
+                            almost any site.
+                            Just use your address during checkout and we'll let you know when your items arrive at the
+                            warehouse.
+                        </p>
+                    </div>
+
+                    <div class="menu-pills">
+                        <ul class="nav nav-pills mb-3 text-center justify-content-center" id="pills-tab" role="tablist">
+                            <li class="nav-item border rounded mr-2 my-2 col-5 p-0">
+                                <a class="nav-link active" id="pills-online-tab" data-toggle="pill" href="#pills-online"
+                                    role="tab" aria-controls="pills-online" aria-selected="true">
+                                    <img src="img/online-shopping.png" alt="Online" width="48">
+                                    Online Shopping
+                                </a>
+                            </li>
+                            <li class="nav-item border rounded my-2 col-5 p-0">
+                                <a class="nav-link" id="pills-shipstar-tab" data-toggle="pill" href="#pills-shipstar"
+                                    role="tab" aria-controls="pills-shipstar" aria-selected="false">
+                                    <img src="img/personal-shopper.png" alt="Shipstar" width="48">
+                                    Personal Shopper
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content my-5" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-online" role="tabpanel"
+                                aria-labelledby="pills-online-tab">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-3 mx-4">
+                                        <h5 class="mb-4 font-weight-bold text-dark">1. Shop online at your favorite
+                                            stores</h5>
+                                        <img src="img/online-shop-img.png" alt="Image" class="w-100">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h5 class="mb-4 font-weight-bold text-dark">2. Use your MyShippii address at
+                                            checkout</h5>
+                                        <div class="myshippii-address">
+                                            <div class="text-dark font-weight-bold">Sibusiso Khumalo</div>
+                                            <div class="text-dark">Unit 50 Manmar Properties, Mercantile Street</div>
+                                            <div class="text-dark">Locker #MYS-0022</div>
+                                            <div class="text-dark">Proclamation Hill</div>
+                                            <div class="text-dark">Pretoria West</div>
+                                            <div class="text-dark">Gauteng. 0183</div>
+                                            <div class="text-dark">South Africa</div>
+                                            <div class="my-3">
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-outline-success"
+                                                    data-toggle="modal" data-target="#exampleModal">
+                                                    Copy My Address
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-lg" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Copy My
+                                                                    Address</h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="alert alert-info" role="alert">
+                                                                    You can copy the address to your clipboard by
+                                                                    clicking or tapping each line.
+                                                                </div>
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="col">#</th>
+                                                                            <th scope="col">Your Address</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th scope="row">Name</th>
+                                                                            <td>Sibusiso Khumalo</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th scope="row">Address 1</th>
+                                                                            <td>Unit 50 Manmar Properties, Mercantile
+                                                                                Street</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th scope="row">Address 2</th>
+                                                                            <td>Locker #MYS-0022</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th scope="row">City</th>
+                                                                            <td>Pretoria West</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th scope="row">State</th>
+                                                                            <td>Gauteng</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th scope="row">Postal Code</th>
+                                                                            <td>0183</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th scope="row">Country</th>
+                                                                            <td>South Africa</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-outline-success"
+                                                                    data-dismiss="modal">Copy My Full Address</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h5 class="mb-4 font-weight-bold text-dark">3. Declare your parcels into your
+                                            locker & we'll take care the rest.</h5>
+                                        <div class="myshippii-address">
+                                            <div class="my-3">
+                                                <a href="#" class="btn btn-success">
+                                                    <span class="text">Create an Active Orders</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-shipstar" role="tabpanel"
+                                aria-labelledby="pills-shipstar-tab">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-4 mx-4">
+                                        <h5 class="mb-4 font-weight-bold text-dark">1. Choose and pick the items you
+                                            wanted to buy from any stores.</h5>
+                                        <img src="img/personal-shopper-img.png" alt="Image" class="w-100">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h5 class="mb-4 font-weight-bold text-dark">2. Fill out the form with the
+                                            details, wait for your parcel to deliver into your locker and we'll take
+                                            care the rest</h5>
+                                        <div class="myshippii-address">
+                                            <div class="my-3">
+                                                <a href="#" class="btn btn-success">
+                                                    <span class="text">Create a Personal Shopper Order</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
+                        <h1 class="h3 mb-0 text-gray-800">Start Using Phatsisa</h1>
+                    </div>
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
+                        <p class="text-body">
+                            Find your nearest Phatsisa outlet, prepare your parcel, fill in the details, and we got you.
+                        </p>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; MyShippii 2023</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+
+</body>
+
+</html>
